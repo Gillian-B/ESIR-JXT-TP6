@@ -1,6 +1,6 @@
 const {app} = require('./app')
-
-const port = process.env.PORT || '3000'
+const config = require("config")
+const port = process.env.PORT || config.get("Server.port")
 
 /**
  * Listen on provided port, on all network interfaces.
